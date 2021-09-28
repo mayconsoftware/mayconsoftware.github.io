@@ -1,3 +1,16 @@
+```mermaid
+sequenceDiagram
+    autonumber
+    Alice->>John: Hello John, how are you? 
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts!
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+```
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/mayconsoftware/mayconsoftware.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
