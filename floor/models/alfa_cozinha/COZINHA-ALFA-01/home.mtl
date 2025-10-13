@@ -1,0 +1,796 @@
+# Home structure for HASS export
+
+newmtl wall_0_1
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1
+d 0.4588235
+
+newmtl wall_0_2
+illum 2
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.25 0.25 0.25
+Ns 32.0
+Ni 1
+d 0.4588235
+
+newmtl wall_2_6
+illum 1
+Ka 0.96862745 1.0 0.09411765
+Kd 0.96862745 1.0 0.09411765
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1
+d 0.4588235
+
+newmtl wall_9_5
+illum 1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1
+d 0.4588235
+
+newmtl wall_17_2
+illum 2
+Ka 0.9764706 0.9764706 0.9764706
+Kd 0.9764706 0.9764706 0.9764706
+Ks 0.25 0.25 0.25
+Ns 32.0
+Ni 1
+d 0.4588235
+
+newmtl wall_19_1
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.25 0.25 0.25
+Ns 32.0
+Ni 1
+d 0.4588235
+map_Kd home_wall_19_1.jpeg
+
+newmtl room_0_1
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.25 0.25 0.25
+Ns 32.0
+Ni 1
+d 1.0
+map_Kd home_room_0_1.jpeg
+
+newmtl room_0_2
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.25 0.25 0.25
+Ns 32.0
+Ni 1
+d 0.4588235
+
+newmtl white
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.46875 0.46875 0.46875
+Ns 60.0
+map_Kd home_white.jpeg
+
+newmtl yellowbrt
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.46875 0.46875 0.46875
+Ns 60.0
+map_Kd home_white.jpeg
+
+newmtl metal
+illum 1
+Ka 0.9647059 0.9647059 0.9647059
+Kd 0.9647059 0.9647059 0.9647059
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl COZINHZ_MAQUINA_LAVAR_2
+illum 1
+Ka 0.9647059 0.9647059 0.9647059
+Kd 0.9647059 0.9647059 0.9647059
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl COZINHZ_MAQUINA_LAVAR_3
+illum 1
+Ka 0.9647059 0.9647059 0.9647059
+Kd 0.9647059 0.9647059 0.9647059
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl COZINHZ_MAQUINA_LAVAR_4
+illum 1
+Ka 0.9647059 0.9647059 0.9647059
+Kd 0.9647059 0.9647059 0.9647059
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl COZINHZ_MAQUINA_LAVAR_5
+illum 1
+Ka 0.9647059 0.9647059 0.9647059
+Kd 0.9647059 0.9647059 0.9647059
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl glass
+illum 1
+Ka 0.9647059 0.9647059 0.9647059
+Kd 0.9647059 0.9647059 0.9647059
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl COZINHZ_MAQUINA_LAVAR_19
+illum 1
+Ka 0.9647059 0.9647059 0.9647059
+Kd 0.9647059 0.9647059 0.9647059
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl COZINHZ_MAQUINA_LAVAR_21
+illum 1
+Ka 0.9647059 0.9647059 0.9647059
+Kd 0.9647059 0.9647059 0.9647059
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl COZINHZ_MAQUINA_LAVAR_24
+illum 1
+Ka 0.9647059 0.9647059 0.9647059
+Kd 0.9647059 0.9647059 0.9647059
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl cupb
+illum 2
+Ka 0.2 0.2 0.2
+Kd 0.94509804 0.9490196 0.9647059
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl sink
+illum 2
+Ka 0.2 0.2 0.2
+Kd 0.31764707 0.3137255 0.29411766
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl chrome
+illum 2
+Ka 0.2 0.2 0.2
+Kd 0.84705883 0.84313726 0.9372549
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl Appliances
+illum 1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl Rubber_ring
+illum 1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl Black_plastic
+illum 1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl Chrome
+illum 1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl Zi
+illum 1
+Ka 0.0 0.0 0.0
+Kd 0.175706 0.110188 0.050745
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl COZINHA_FOGAO_2
+illum 1
+Ka 0.0 0.0 0.0
+Kd 0.643401 0.643401 0.643401
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl monitor
+illum 1
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl WashBasin
+illum 1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl Hole
+illum 1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl Tap
+illum 1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl MetalFaucet
+illum 1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl HoleFaucet
+illum 1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl fabric
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1
+d 0.66
+map_Kd home_fabric.jpeg
+
+newmtl Cage_in
+illum 2
+Ka 1.0 1.0 1.0
+Kd 0.9 0.9 0.9
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl Cage_out
+illum 2
+Ka 1.0 1.0 1.0
+Kd 0.92 0.91 0.86
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl Frame_out
+illum 2
+Ka 1.0 1.0 1.0
+Kd 0.92 0.91 0.86
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl Frame_in
+illum 2
+Ka 1.0 1.0 1.0
+Kd 0.9 0.9 0.9
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl COZINHA_JANELA_7
+illum 2
+Ka 1.0 1.0 1.0
+Kd 0.020379 0.020379 0.020379
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl Glass
+illum 2
+Ka 0.5 0.5 0.5
+Kd 0.8245 0.8245 0.8245
+Ks 0.5 0.5 0.5
+Ns 64.0
+Ni 1
+d 0.5
+
+newmtl white_COZINHA_ARMARIO_LIMPEZA_1
+illum 1
+Ka 0.93333334 0.93333334 0.93333334
+Kd 0.93333334 0.93333334 0.93333334
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl default
+illum 1
+Ka 0.93333334 0.93333334 0.93333334
+Kd 0.93333334 0.93333334 0.93333334
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl GlassJar
+illum 2
+Ka 0.843492 0.843492 0.843492
+Kd 0.843492 0.843492 0.843492
+Ks 0.5 0.5 0.5
+Ns 120.0
+Ni 1
+d 0.7
+
+newmtl WoodenTop
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.05 0.05 0.05
+Ns 2.0
+map_Kd home_WoodenTop.jpeg
+
+newmtl Rice
+illum 1
+Ka 0.36862746 0.11372549 0.0
+Kd 0.36862746 0.11372549 0.0
+Ks 0.0078125 0.0078125 0.0078125
+Ns 1.0
+
+newmtl Rice_COZINHA_POTE_ACUCAR_3
+illum 1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0078125 0.0078125 0.0078125
+Ns 1.0
+
+newmtl COZINHA_MICROONDAS_1
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.9 0.9 0.9
+Ks 0.5 0.5 0.5
+Ns 96.07843
+
+newmtl COZINHA_MICROONDAS_2
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.8 0.8 0.8
+Ks 0.5 0.5 0.5
+Ns 96.07843
+
+newmtl COZINHA_MICROONDAS_6
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.64 0.64 0.64
+Ks 0.5 0.5 0.5
+Ns 96.07843
+Ni 1
+d 0.5
+
+newmtl COZINHA_MICROONDAS_7
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.013909 0.013909 0.013909
+Ks 0.5 0.5 0.5
+Ns 96.07843
+
+newmtl bone1
+illum 1
+Ka 0.6408 0.5554 0.3845
+Kd 0.9837 0.7959 0.4694
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl black
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.002 0.002 0.002
+Ks 0.5184 0.5184 0.5184
+Ns 128.0
+
+newmtl flwhite
+illum 2
+Ka 0.6449 0.6116 0.5447
+Kd 0.9837 0.9309 0.8392
+Ks 0.8082 0.729 0.5708
+Ns 128.0
+
+newmtl Box45_1
+illum 1
+Ka 0.9647059 0.9647059 0.9647059
+Kd 0.9647059 0.9647059 0.9647059
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl white_Kitchen_upper_cabinet_1
+illum 1
+Ka 0.4 0.4 0.4
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl COZINHA_JARRO_1
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.207418 0.207418 0.207418
+Ns 96.07843
+map_Kd home_COZINHA_JARRO_1.jpeg
+
+newmtl amber
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.46875 0.46875 0.46875
+Ns 60.0
+map_Kd home_amber.jpeg
+
+newmtl blackExterior
+illum 1
+Ka 0.04 0.04 0.04
+Kd 0.04 0.04 0.04
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl blackMetal
+illum 1
+Ka 0.012038 0.012038 0.012038
+Kd 0.012038 0.012038 0.012038
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl blackPlastic
+illum 1
+Ka 0.013968 0.013968 0.013968
+Kd 0.013968 0.013968 0.013968
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl lights
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+map_Kd home_lights.jpeg
+
+newmtl metalTop
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+map_Kd home_metalTop.jpeg
+
+newmtl Gris
+illum 1
+Ka 0.52941 0.52941 0.52941
+Kd 0.53 0.53 0.53
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl Blanc
+illum 1
+Ka 0.3254902 0.3254902 0.3254902
+Kd 0.3254902 0.3254902 0.3254902
+Ks 0.0078125 0.0078125 0.0078125
+Ns 1.0
+
+newmtl gris_acier
+illum 2
+Ka 0.68627 0.68627 0.68627
+Kd 0.59 0.59 0.59
+Ks 0.2 0.2 0.2
+Ns 103.0
+
+newmtl vitre
+illum 1
+Ka 0.79 0.79 0.79
+Kd 0.14 0.14 0.14
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1
+d 0.5
+
+newmtl rouge
+illum 1
+Ka 1.0 0.0 0.0
+Kd 1.0 0.0 0.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl Black
+illum 1
+Ka 0.0 0.0 0.0
+Kd 0.18 0.18 0.18
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl carafe
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.48 0.56 0.56
+Ks 0.881118 0.881118 0.881118
+Ns 128.0
+Ni 1
+d 0.19999999
+
+newmtl Chrome_CAFETEIRA_3
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.48 0.48 0.4
+Ks 2.0 2.0 2.0
+Ns 128.0
+
+newmtl White_plastic
+illum 2
+Ka 0.3254902 0.3254902 0.3254902
+Kd 0.3254902 0.3254902 0.3254902
+Ks 0.75 0.75 0.75
+Ns 96.0
+
+newmtl Black_paint
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 0.881118 0.881118 0.881118
+Ns 128.0
+
+newmtl BasePlastic
+illum 2
+Ka 0.3254902 0.3254902 0.3254902
+Kd 0.3254902 0.3254902 0.3254902
+Ks 0.1953125 0.1953125 0.1953125
+Ns 25.0
+
+newmtl BaseControlPanel
+illum 2
+Ka 0.3254902 0.3254902 0.3254902
+Kd 0.3254902 0.3254902 0.3254902
+Ks 0.1953125 0.1953125 0.1953125
+Ns 25.0
+
+newmtl Pot
+illum 2
+Ka 1.0 1.0 1.0
+Kd 0.039421 0.039421 0.039421
+Ks 0.052 0.052 0.052
+Ns 5.0
+
+newmtl Controls
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.26 0.26 0.26
+Ns 128.0
+map_Kd home_Controls.jpeg
+
+newmtl MetalButton
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 128.0
+map_Kd home_Controls.jpeg
+
+newmtl Glass_AIR_FRYER_8
+illum 2
+Ka 1.0 1.0 1.0
+Kd 0.546239 0.662013 0.8
+Ks 0.14 0.14 0.14
+Ns 128.0
+Ni 1
+d 0.34399998
+
+newmtl vent_out
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 0.98039216 0.98039216
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl fan
+illum 2
+Ka 0.2 0.2 0.2
+Kd 0.31764707 0.31764707 0.31764707
+Ks 1.0 1.0 1.0
+Ns 128.0
+
+newmtl vent_in
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 1.0 1.0 1.0
+Ns 128.0
+
+newmtl vent
+illum 1
+Ka 0.2 0.2 0.2
+Kd 0.4117647 0.4117647 0.4117647
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl COZINHA_INTERFONE_1
+illum 2
+Ka 0.9647059 0.9647059 0.9647059
+Kd 0.9647059 0.9647059 0.9647059
+Ks 0.015318625 0.015318625 0.015318625
+Ns 1.960784
+
+newmtl wire
+illum 2
+Ka 0.9647059 0.9647059 0.9647059
+Kd 0.9647059 0.9647059 0.9647059
+Ks 0.015318625 0.015318625 0.015318625
+Ns 1.960784
+
+newmtl COZINHA_INTERFONE_4
+illum 2
+Ka 0.9647059 0.9647059 0.9647059
+Kd 0.9647059 0.9647059 0.9647059
+Ks 0.015318625 0.015318625 0.015318625
+Ns 1.960784
+
+newmtl COZINHA_INTERFONE_5
+illum 2
+Ka 0.9647059 0.9647059 0.9647059
+Kd 0.9647059 0.9647059 0.9647059
+Ks 0.49019608 0.49019608 0.49019608
+Ns 62.7451
+
+newmtl COZINHA_INTERFONE_6
+illum 2
+Ka 0.9647059 0.9647059 0.9647059
+Kd 0.9647059 0.9647059 0.9647059
+Ks 0.42892158 0.42892158 0.42892158
+Ns 54.901962
+
+newmtl whiteplastic
+illum 1
+Ka 1.0 1.0 1.0
+Kd 0.651229 0.651229 0.651229
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl hole
+illum 1
+Ka 1.0 1.0 1.0
+Kd 0.010728 0.010728 0.010728
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl redbulb
+illum 1
+Ka 1.0 1.0 1.0
+Kd 0.706332 0.026316 0.018207
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl COZINHA_FILTRO_AGUA_1
+illum 2
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl COZINHA_FILTRO_AGUA_7
+illum 2
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl COZINHA_FILTRO_AGUA_8
+illum 2
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl COZINHA_FILTRO_AGUA_10
+illum 2
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl white_COZINHA_FILTRO_AGUA_12
+illum 2
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl COZINHA_FILTRO_AGUA_13
+illum 2
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl metal_COZINHA_LUZ_COZINHA_1
+illum 1
+Ka 1.0 1.0 1.0
+Kd 0.321575 0.321575 0.321575
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl COZINHA_LUZ_COZINHA_2
+illum 1
+Ka 1.0 1.0 1.0
+Kd 0.683983 0.683983 0.683983
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl COZINHA_LUZ_COZINHA_3
+illum 1
+Ka 0.2 0.2 0.2
+Kd 0.82 0.82 0.82
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1
+d 0.5
+
+newmtl COZINHA_LUZ_COZINHA_4
+illum 1
+Ka 0.71134 0.71134 0.71134
+Kd 0.307499 0.307499 0.307499
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl whiteplastic_COZINHA_DETECTOR_DE_FUMACA_1
+illum 1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl hole_COZINHA_DETECTOR_DE_FUMACA_2
+illum 1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl redbulb_COZINHA_DETECTOR_DE_FUMACA_3
+illum 1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl 12_oz_glass
+illum 2
+Ka 0.47058824 0.78039217 0.78039217
+Kd 0.47058824 0.78039217 0.78039217
+Ks 1.0 1.0 1.0
+Ns 128.0
+Ni 1
+d 0.19999999
+
+newmtl silver
+illum 2
+Ka 0.47058824 0.78039217 0.78039217
+Kd 0.47058824 0.78039217 0.78039217
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl Base
+illum 2
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 64.0
