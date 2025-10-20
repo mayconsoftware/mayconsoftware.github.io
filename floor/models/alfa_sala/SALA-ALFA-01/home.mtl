@@ -1,0 +1,632 @@
+# Home structure for HASS export
+
+newmtl wall_0_1
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1
+d 1.0
+
+newmtl room_0_1
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.25 0.25 0.25
+Ns 32.0
+Ni 1
+d 1.0
+map_Kd home_room_0_1.jpeg
+
+newmtl room_0_2
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.25 0.25 0.25
+Ns 32.0
+Ni 1
+d 1.0
+
+newmtl white
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.46875 0.46875 0.46875
+Ns 60.0
+map_Kd home_white.jpeg
+
+newmtl yellowbrt
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.46875 0.46875 0.46875
+Ns 60.0
+map_Kd home_white.jpeg
+
+newmtl Fabric
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+map_Kd home_Fabric.jpeg
+
+newmtl Trim
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+map_Kd home_Fabric.jpeg
+
+newmtl Wood
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+map_Kd home_Fabric.jpeg
+
+newmtl fabric
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1
+d 0.66
+map_Kd home_fabric_1.jpeg
+
+newmtl Cage_in
+illum 2
+Ka 1.0 1.0 1.0
+Kd 0.9 0.9 0.9
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl Cage_out
+illum 2
+Ka 1.0 1.0 1.0
+Kd 0.92 0.91 0.86
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl Frame_out
+illum 2
+Ka 1.0 1.0 1.0
+Kd 0.92 0.91 0.86
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl Frame_in
+illum 2
+Ka 1.0 1.0 1.0
+Kd 0.9 0.9 0.9
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl ESQUERDA_7
+illum 2
+Ka 1.0 1.0 1.0
+Kd 0.020379 0.020379 0.020379
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl Glass
+illum 2
+Ka 0.5 0.5 0.5
+Kd 0.8245 0.8245 0.8245
+Ks 0.5 0.5 0.5
+Ns 64.0
+Ni 1
+d 0.5
+
+newmtl Bois
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 64.0
+map_Kd home_Bois.jpeg
+
+newmtl Default_Texture
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 64.0
+map_Kd home_Bois.jpeg
+
+newmtl SALA_TV_1
+illum 2
+Ka 1.0 1.0 1.0
+Kd 0.01391 0.01391 0.01391
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl SALA_TV_2
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 64.0
+map_Kd home_SALA_TV_2.jpeg
+
+newmtl SALA_TV_3
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 64.0
+map_Kd home_SALA_TV_3.jpeg
+
+newmtl decoration
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 64.0
+map_Kd home_SALA_TV_3.jpeg
+
+newmtl SALA_MESA_HONDA_BASE_1
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 64.0
+map_Kd home_SALA_MESA_HONDA_BASE_1.jpeg
+
+newmtl SALA_MESA_HONDA_BASE_4
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 64.0
+map_Kd home_SALA_MESA_HONDA_BASE_1.jpeg
+
+newmtl meh
+illum 2
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 64.0
+Ni 1
+d 0.25
+
+newmtl fusta_taula
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+map_Kd home_SALA_MESA_HONDA_BASE_1.jpeg
+
+newmtl coixi_cadira
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+map_Kd home_Fabric.jpeg
+
+newmtl bone1
+illum 1
+Ka 0.6408 0.5554 0.3845
+Kd 0.9837 0.7959 0.4694
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl black
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.002 0.002 0.002
+Ks 0.5184 0.5184 0.5184
+Ns 128.0
+
+newmtl flwhite
+illum 2
+Ka 0.6449 0.6116 0.5447
+Kd 0.9837 0.9309 0.8392
+Ks 0.8082 0.729 0.5708
+Ns 128.0
+
+newmtl metal
+illum 1
+Ka 1.0 0.54509807 0.003921569
+Kd 1.0 0.54509807 0.003921569
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl HALL_DA_SALA_2
+illum 1
+Ka 1.0 0.54509807 0.003921569
+Kd 1.0 0.54509807 0.003921569
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl HALL_DA_SALA_3
+illum 1
+Ka 1.0 0.54509807 0.003921569
+Kd 1.0 0.54509807 0.003921569
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1
+d 0.5
+
+newmtl HALL_DA_SALA_4
+illum 1
+Ka 1.0 0.54509807 0.003921569
+Kd 1.0 0.54509807 0.003921569
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl FAN_BLADE
+illum 1
+Ka 0.8235294 0.79607844 0.8
+Kd 0.8235294 0.79607844 0.8
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl BODY
+illum 1
+Ka 0.8235294 0.79607844 0.8
+Kd 0.8235294 0.79607844 0.8
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl BUTTON_04
+illum 1
+Ka 0.8235294 0.79607844 0.8
+Kd 0.8235294 0.79607844 0.8
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl BUTTON_03
+illum 1
+Ka 0.8235294 0.79607844 0.8
+Kd 0.8235294 0.79607844 0.8
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl BUTTON_02
+illum 1
+Ka 0.8235294 0.79607844 0.8
+Kd 0.8235294 0.79607844 0.8
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl BUTTON_01
+illum 1
+Ka 0.8235294 0.79607844 0.8
+Kd 0.8235294 0.79607844 0.8
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl lighttan
+illum 2
+Ka 0.098 0.0536 0.022
+Kd 0.702 0.421 0.2206
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl Potplant2_1
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.18 0.36 0.13
+Ks 0.625 0.625 0.625
+Ns 80.0
+
+newmtl Potplant2_2
+illum 2
+Ka 0.40784314 0.14901961 0.15686275
+Kd 0.40784314 0.14901961 0.15686275
+Ks 0.5078125 0.5078125 0.5078125
+Ns 65.0
+
+newmtl Potplant2_3
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.24 0.15 0.02
+Ks 0.5078125 0.5078125 0.5078125
+Ns 65.0
+
+newmtl Paint
+illum 2
+Ka 0.14509805 0.14509805 0.14509805
+Kd 0.14509805 0.14509805 0.14509805
+Ks 0.75061274 0.75061274 0.75061274
+Ns 96.07843
+
+newmtl Chrome
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3828125 0.3828125 0.3828125
+Ns 49.0
+map_Kd home_SALA_MESA_HONDA_BASE_1.jpeg
+
+newmtl Mirror
+illum 2
+Ka 0.93333334 0.93333334 0.93333334
+Kd 0.93333334 0.93333334 0.93333334
+Ks 1.0 1.0 1.0
+Ns 128.0
+
+newmtl Back
+illum 1
+Ka 0.93333334 0.93333334 0.93333334
+Kd 0.93333334 0.93333334 0.93333334
+Ks 0.0078125 0.0078125 0.0078125
+Ns 1.0
+
+newmtl Picture
+illum 1
+Ka 0.93333334 0.93333334 0.93333334
+Kd 0.93333334 0.93333334 0.93333334
+Ks 0.0078125 0.0078125 0.0078125
+Ns 1.0
+
+newmtl Frame
+illum 2
+Ka 0.93333334 0.93333334 0.93333334
+Kd 0.93333334 0.93333334 0.93333334
+Ks 0.9375 0.9375 0.9375
+Ns 120.0
+
+newmtl 12_oz_glass
+illum 2
+Ka 0.47058824 0.78039217 0.78039217
+Kd 0.47058824 0.78039217 0.78039217
+Ks 1.0 1.0 1.0
+Ns 128.0
+Ni 1
+d 0.19999999
+
+newmtl silver
+illum 2
+Ka 0.47058824 0.78039217 0.78039217
+Kd 0.47058824 0.78039217 0.78039217
+Ks 0.5 0.5 0.5
+Ns 64.0
+
+newmtl MetalBaseTable
+illum 2
+Ka 0.8 0.8 0.8
+Kd 0.8 0.8 0.8
+Ks 0.7421875 0.7421875 0.7421875
+Ns 95.0
+
+newmtl PlasticConnector
+illum 2
+Ka 0.8 0.8 0.8
+Kd 0.8 0.8 0.8
+Ks 0.125 0.125 0.125
+Ns 10.0
+
+newmtl PlasticWheels
+illum 2
+Ka 0.4 0.4 0.4
+Kd 0.4 0.4 0.4
+Ks 0.102273 0.102273 0.102273
+Ns 20.0
+
+newmtl ConnectorWheels
+illum 2
+Ka 0.7 0.7 0.7
+Kd 0.7 0.7 0.7
+Ks 0.6015625 0.6015625 0.6015625
+Ns 77.0
+
+newmtl PlasticGear
+illum 2
+Ka 0.7 0.7 0.7
+Kd 0.7 0.7 0.7
+Ks 0.170455 0.170455 0.170455
+Ns 10.0
+
+newmtl TableBandProtection
+illum 2
+Ka 0.65 0.65 0.65
+Kd 0.65 0.65 0.65
+Ks 0.7734375 0.7734375 0.7734375
+Ns 99.0
+
+newmtl TableBar
+illum 2
+Ka 0.65 0.65 0.65
+Kd 0.65 0.65 0.65
+Ks 0.5 0.5 0.5
+Ns 80.0
+
+newmtl TableTop
+illum 2
+Ka 0.26666668 0.26666668 0.26666668
+Kd 0.26666668 0.26666668 0.26666668
+Ks 0.515625 0.515625 0.515625
+Ns 66.0
+
+newmtl White_plastic
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.8 0.8 0.8
+Ks 0.5 0.5 0.5
+Ns 96.07843
+
+newmtl Aluminum
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.56 0.56 0.56
+Ks 0.705217 0.705217 0.705217
+Ns 105.882355
+
+newmtl LCD
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.16 0.16 0.16
+Ks 0.4 0.4 0.4
+Ns 17.647058
+
+newmtl Apple_logo
+illum 2
+Ka 0.0 0.0 0.0
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 96.07843
+Ni 1
+d 0.8
+
+newmtl top
+illum 2
+Ka 0.4 0.4 0.4
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 60.0
+
+newmtl cylinder
+illum 2
+Ka 0.4 0.4 0.4
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 60.0
+
+newmtl bottom
+illum 2
+Ka 0.4 0.4 0.4
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 60.0
+
+newmtl bclair
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0078125 0.0078125 0.0078125
+Ns 1.0
+map_Kd home_Bois.jpeg
+
+newmtl bottom_Box_1
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.46875 0.46875 0.46875
+Ns 60.0
+map_Kd home_bottom_Box_1.jpeg
+
+newmtl top_Box_2
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.46875 0.46875 0.46875
+Ns 60.0
+map_Kd home_bottom_Box_1.jpeg
+
+newmtl left
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.46875 0.46875 0.46875
+Ns 60.0
+map_Kd home_bottom_Box_1.jpeg
+
+newmtl right
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.46875 0.46875 0.46875
+Ns 60.0
+map_Kd home_bottom_Box_1.jpeg
+
+newmtl back
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.46875 0.46875 0.46875
+Ns 60.0
+map_Kd home_bottom_Box_1.jpeg
+
+newmtl front
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.46875 0.46875 0.46875
+Ns 60.0
+map_Kd home_bottom_Box_1.jpeg
+
+newmtl bottom_Box_1_1
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.46875 0.46875 0.46875
+Ns 60.0
+map_Kd home_Bois.jpeg
+
+newmtl top_Box_2_1
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.46875 0.46875 0.46875
+Ns 60.0
+map_Kd home_Bois.jpeg
+
+newmtl left_Box_3
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.46875 0.46875 0.46875
+Ns 60.0
+map_Kd home_Bois.jpeg
+
+newmtl right_Box_4
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.46875 0.46875 0.46875
+Ns 60.0
+map_Kd home_Bois.jpeg
+
+newmtl back_Box_5
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 1.0 1.0 1.0
+Ns 128.0
+map_Kd home_Bois.jpeg
+
+newmtl front_Box_6
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.46875 0.46875 0.46875
+Ns 60.0
+map_Kd home_Bois.jpeg
+
+newmtl Frame_Etretat_1
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 0.0 0.0 0.0
+Ns 96.07843
+
+newmtl Material_Etretat
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.2 0.2 0.2
+Ns 96.07843
+map_Kd home_Material_Etretat.jpeg
+
+newmtl Aluminium
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.793794 0.735568 0.649846
+Ks 0.496078 0.47552 0.44901
+Ns 96.07843
+
+newmtl Mirror_1
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 96.07843
+map_Kd home_Mirror_1.jpeg
