@@ -1,0 +1,240 @@
+.portfolio-header {
+  background: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-16) 0 var(--space-12);
+
+  &__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-bottom: var(--space-4);
+  }
+
+  &__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    max-width: 640px;
+    line-height: 1.6;
+  }
+}
+
+// About
+.about-section {
+  background: var(--color-bg);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.about-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+
+  p {
+    font-size: var(--font-size-lg);
+    line-height: 1.8;
+
+    strong {
+      color: var(--color-text);
+      font-weight: 700;
+    }
+  }
+}
+
+.about-values {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.about-value {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+
+  &__icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  strong {
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+  }
+
+  span {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+  }
+}
+
+.about-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.about-card {
+  &__title {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: var(--font-size-xs);
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+
+    li {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-muted);
+      padding: var(--space-2) 0;
+      border-bottom: 1px solid var(--color-border);
+
+      &:last-child { border-bottom: none; }
+    }
+  }
+}
+
+// Tech section
+.tech-section {
+  background: var(--color-bg-secondary);
+}
+
+.tech-categories {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.tech-category {
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-3);
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+  }
+}
+
+.tech-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+  }
+
+  &__name {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  &__level {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    padding: 0.125rem 0.625rem;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  &__desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+}
+
+// Integrations
+.integrations-section {
+  background: var(--color-bg);
+}
+
+.integrations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+
+  @media (min-width: 480px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.integration-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  text-align: center;
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  &__name {
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-text-muted);
+  }
+}

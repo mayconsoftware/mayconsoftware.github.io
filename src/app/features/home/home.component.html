@@ -1,0 +1,185 @@
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="hero__bg-decoration" aria-hidden="true">
+    <div class="hero__blob hero__blob--1"></div>
+    <div class="hero__blob hero__blob--2"></div>
+    <div class="hero__grid"></div>
+  </div>
+
+  <div class="container hero__container">
+    <div class="hero__content animate-fade-in-up">
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Disponível para projetos
+      </div>
+
+      <h1 class="hero__title">
+        Olá, sou <span class="gradient-text">Maycon</span> —<br>
+        Engenheiro de Software
+      </h1>
+
+      <p class="hero__desc">
+        Apaixonado por criar soluções elegantes com Angular, TypeScript e automação residencial.
+        Transformo ideias em produtos digitais com foco em performance, qualidade e experiência do usuário.
+      </p>
+
+      <div class="hero__actions">
+        <a routerLink="/portfolio" class="btn btn--primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+          Ver Portfolio
+        </a>
+        <a routerLink="/blog" class="btn btn--secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+          Ler Blog
+        </a>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-value gradient-text">10+</span>
+          <span class="hero__stat-label">Anos de experiência</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-value gradient-text">248</span>
+          <span class="hero__stat-label">Contribuições/ano</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-value gradient-text">∞</span>
+          <span class="hero__stat-label">Curiosidade</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__image-area animate-fade-in-up" style="animation-delay: 0.2s">
+      <div class="hero__avatar-wrapper">
+        <div class="hero__avatar-ring"></div>
+        <div class="hero__avatar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <!-- Floating chips -->
+        <div class="hero__chip hero__chip--1">
+          <span>Angular v19</span>
+        </div>
+        <div class="hero__chip hero__chip--2">
+          <span>🏠 Smart Home</span>
+        </div>
+        <div class="hero__chip hero__chip--3">
+          <span>TypeScript</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TECH STACK ====== -->
+<section class="section tech-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Tecnologias que <span class="gradient-text">amo</span></h2>
+      <p class="section-subtitle">
+        Ferramentas e tecnologias que uso no dia a dia para criar soluções robustas e escaláveis.
+      </p>
+    </div>
+
+    <div class="tech-grid">
+      @for (tech of techs; track tech.name) {
+        <div class="tech-card card">
+          <div class="tech-card__icon" [style.background]="tech.color + '20'" [style.color]="tech.color">
+            {{ tech.icon }}
+          </div>
+          <span class="tech-card__name">{{ tech.name }}</span>
+        </div>
+      }
+    </div>
+
+    <div class="tech-more">
+      <a routerLink="/portfolio" class="btn btn--ghost">
+        Ver todas as tecnologias →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CONTRIBUTION GRAPH ====== -->
+<section class="section contrib-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Atividade no <span class="gradient-text">GitHub</span></h2>
+      <p class="section-subtitle">
+        Contribuições abertas, projetos pessoais e automações domésticas — código como hobbie e profissão.
+      </p>
+    </div>
+
+    <app-contribution-graph />
+  </div>
+</section>
+
+<!-- ====== RECENT POSTS ====== -->
+@if (recentPosts().length > 0) {
+  <section class="section blog-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Posts <span class="gradient-text">recentes</span></h2>
+        <p class="section-subtitle">Artigos sobre desenvolvimento, automação e tecnologia.</p>
+      </div>
+
+      <div class="blog-grid">
+        @for (post of recentPosts(); track post.slug) {
+          <article class="blog-card card">
+            <div class="blog-card__meta">
+              <time class="blog-card__date">{{ formatDate(post.date) }}</time>
+              <span class="blog-card__reading-time">{{ post.readingTimeMin }} min de leitura</span>
+            </div>
+            <h3 class="blog-card__title">
+              <a [routerLink]="['/blog', post.slug]">{{ post.title }}</a>
+            </h3>
+            <p class="blog-card__excerpt">{{ post.excerpt }}</p>
+            <div class="blog-card__tags">
+              @for (tag of post.tags.slice(0, 3); track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+            </div>
+          </article>
+        }
+      </div>
+
+      <div class="blog-more">
+        <a routerLink="/blog" class="btn btn--secondary">Ver todos os posts</a>
+      </div>
+    </div>
+  </section>
+}
+
+<!-- ====== CTA ====== -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-card">
+      <div class="cta-card__bg" aria-hidden="true"></div>
+      <div class="cta-card__content">
+        <h2 class="cta-card__title">Vamos conversar sobre tecnologia?</h2>
+        <p class="cta-card__text">
+          Estou sempre aberto a discutir novas ideias, projetos e oportunidades.
+        </p>
+        <a href="https://github.com/visaodeempresa" target="_blank" rel="noopener" class="btn btn--primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+          Me encontre no GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

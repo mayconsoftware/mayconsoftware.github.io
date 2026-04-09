@@ -1,0 +1,220 @@
+.blog-page {
+  min-height: 100vh;
+
+  &__header {
+    background: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-16) 0 var(--space-8);
+  }
+
+  &__hero {
+    margin-bottom: var(--space-8);
+  }
+
+  &__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-bottom: var(--space-3);
+  }
+
+  &__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  &__content {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-16);
+  }
+
+  &__loading {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-20) 0;
+    text-align: center;
+    color: var(--color-text-muted);
+
+    svg {
+      opacity: 0.4;
+    }
+  }
+}
+
+// Tag active state
+.tag--active {
+  background: var(--color-primary) !important;
+  color: white !important;
+  border-color: var(--color-primary) !important;
+}
+
+// Skeleton
+.blog-skeleton {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+
+  &__meta, &__title, &__text {
+    height: 16px;
+    border-radius: var(--radius-md);
+    background: var(--color-surface-hover);
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  &__meta { width: 40%; }
+  &__title { width: 70%; height: 24px; }
+  &__text { width: 100%; }
+  &__text--short { width: 60%; }
+}
+
+// Featured post
+.blog-featured {
+  position: relative;
+  margin-bottom: var(--space-10);
+  padding: var(--space-8);
+  background: linear-gradient(135deg, var(--color-surface), var(--color-bg));
+  border-color: var(--color-primary-light);
+
+  &__badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+    background: var(--color-primary);
+    color: white;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-4);
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-3);
+  }
+
+  &__title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    margin-bottom: var(--space-4);
+
+    a {
+      color: var(--color-text);
+      text-decoration: none;
+
+      &:hover { color: var(--color-primary); }
+    }
+  }
+
+  &__excerpt {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: var(--space-6);
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+}
+
+.btn--sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+// Blog grid
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    font-weight: 600;
+  }
+
+  &__time {
+    background: var(--color-surface-hover);
+    padding: 0.125rem 0.5rem;
+    border-radius: var(--radius-full);
+  }
+
+  &__title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    line-height: 1.3;
+
+    a {
+      color: var(--color-text);
+      text-decoration: none;
+
+      &:hover { color: var(--color-primary); }
+    }
+  }
+
+  &__excerpt {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+}

@@ -1,0 +1,70 @@
+<div class="post-page">
+  <div class="container post-page__container">
+    <!-- Back -->
+    <a routerLink="/blog" class="post-page__back">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+      Voltar ao Blog
+    </a>
+
+    @if (loading()) {
+      <div class="post-skeleton">
+        <div class="post-skeleton__title"></div>
+        <div class="post-skeleton__meta"></div>
+        @for (i of [1,2,3,4,5]; track i) {
+          <div class="post-skeleton__line" [style.width]="(60 + i * 7) + '%'"></div>
+        }
+      </div>
+    } @else if (error()) {
+      <div class="post-error">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <h2>Post não encontrado</h2>
+        <p>O artigo que você está procurando não existe ou foi movido.</p>
+        <a routerLink="/blog" class="btn btn--primary">← Voltar ao Blog</a>
+      </div>
+    } @else {
+      <article class="post">
+        <!-- Header -->
+        <header class="post__header">
+          @if (post()) {
+            <div class="post__tags">
+              @for (tag of post()!.tags; track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+            </div>
+            <h1 class="post__title">{{ post()!.title }}</h1>
+            <div class="post__meta">
+              <time>{{ formatDate(post()!.date) }}</time>
+              <span class="post__meta-sep">·</span>
+              <span>{{ post()!.readingTimeMin }} min de leitura</span>
+            </div>
+          }
+        </header>
+
+        <!-- Content -->
+        <div class="post__content prose" [innerHTML]="content()"></div>
+
+        <!-- Footer -->
+        <footer class="post__footer">
+          <div class="post__share">
+            <span>Gostou? Compartilhe:</span>
+            <a
+              [href]="'https://github.com/visaodeempresa'"
+              target="_blank"
+              rel="noopener"
+              class="btn btn--ghost"
+            >
+              GitHub
+            </a>
+          </div>
+          <a routerLink="/blog" class="btn btn--secondary">← Mais posts</a>
+        </footer>
+      </article>
+    }
+  </div>
+</div>

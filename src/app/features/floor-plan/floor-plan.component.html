@@ -1,0 +1,135 @@
+<header class="fp-header">
+  <div class="container">
+    <h1 class="fp-header__title">
+      <span class="gradient-text">Smart Home</span>
+    </h1>
+    <p class="fp-header__subtitle">
+      Projetos de automação residencial, modelos 3D de plantas baixas e integrações IoT.
+    </p>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <!-- Intro -->
+    <div class="fp-intro">
+      <div class="fp-intro__text">
+        <h2>Automação <span class="gradient-text">Residencial</span></h2>
+        <p>
+          Projetos de automação integrados com Home Assistant, dispositivos Zigbee,
+          Tuya e Matter. Cada ambiente foi modelado em 3D para visualizar as instalações
+          antes da execução.
+        </p>
+        <p>
+          Os modelos abaixo são arquivos OBJ/JSON exportados de software de modelagem
+          arquitetônica, preservados aqui como referência do projeto.
+        </p>
+      </div>
+
+      <div class="fp-intro__stats">
+        <div class="fp-stat card">
+          <span class="fp-stat__value gradient-text">4</span>
+          <span class="fp-stat__label">Modelos 3D</span>
+        </div>
+        <div class="fp-stat card">
+          <span class="fp-stat__value gradient-text">50+</span>
+          <span class="fp-stat__label">Dispositivos IoT</span>
+        </div>
+        <div class="fp-stat card">
+          <span class="fp-stat__value gradient-text">12</span>
+          <span class="fp-stat__label">Integrações HA</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Models -->
+    <h3 class="fp-models-title">Modelos 3D disponíveis</h3>
+    <div class="fp-models-grid">
+      @for (model of models; track model.id) {
+        <div
+          class="fp-model-card card"
+          [class.fp-model-card--selected]="selectedModel?.id === model.id"
+          (click)="selectModel(model)"
+        >
+          <div class="fp-model-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="fp-model-card__content">
+            <h4>{{ model.name }}</h4>
+            <p>{{ model.description }}</p>
+            <code class="fp-model-card__path">{{ model.jsonPath }}</code>
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- Selected model info -->
+    @if (selectedModel) {
+      <div class="fp-detail card">
+        <div class="fp-detail__header">
+          <h3>{{ selectedModel.name }}</h3>
+          <button class="btn btn--ghost" (click)="clearModel()">✕ Fechar</button>
+        </div>
+
+        <div class="fp-detail__content">
+          <p>{{ selectedModel.description }}</p>
+
+          <div class="fp-detail__paths">
+            <h4>Arquivos do modelo</h4>
+            <div class="fp-detail__path-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              </svg>
+              <code>{{ selectedModel.jsonPath }}</code>
+            </div>
+            <div class="fp-detail__path-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              </svg>
+              <code>{{ selectedModel.jsonPath.replace('home.json', 'home.obj') }}</code>
+            </div>
+          </div>
+
+          <div class="fp-detail__note">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            <span>Os modelos são arquivos grandes (10–150MB). Para visualizá-los, use um software de modelagem 3D como Blender ou Three.js.</span>
+          </div>
+        </div>
+      </div>
+    }
+
+    <!-- Smart Home ecosystem -->
+    <div class="fp-ecosystem">
+      <h3 class="fp-ecosystem__title">Ecossistema de Automação</h3>
+      <div class="fp-ecosystem__grid">
+        <div class="fp-eco-card card">
+          <div class="fp-eco-card__icon">🏡</div>
+          <h4>Home Assistant</h4>
+          <p>Hub central de automação. Controla todos os dispositivos via uma interface unificada e open source.</p>
+        </div>
+        <div class="fp-eco-card card">
+          <div class="fp-eco-card__icon">⚡</div>
+          <h4>Zigbee</h4>
+          <p>Rede de baixo consumo para sensores, lâmpadas e tomadas inteligentes com comunicação mesh.</p>
+        </div>
+        <div class="fp-eco-card card">
+          <div class="fp-eco-card__icon">📡</div>
+          <h4>MQTT</h4>
+          <p>Protocolo de mensagens para comunicação em tempo real entre dispositivos IoT e o hub.</p>
+        </div>
+        <div class="fp-eco-card card">
+          <div class="fp-eco-card__icon">🔮</div>
+          <h4>Matter / Thread</h4>
+          <p>Novo padrão universal para interoperabilidade entre ecossistemas Apple, Google e Amazon.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

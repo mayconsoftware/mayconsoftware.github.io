@@ -1,0 +1,109 @@
+<div class="blog-page">
+  <!-- Header -->
+  <header class="blog-page__header">
+    <div class="container">
+      <div class="blog-page__hero">
+        <h1 class="blog-page__title">
+          <span class="gradient-text">Blog</span>
+        </h1>
+        <p class="blog-page__subtitle">
+          Artigos sobre desenvolvimento de software, automação residencial, open source e tecnologia em geral.
+        </p>
+      </div>
+
+      <!-- Tags filter -->
+      @if (allTags().length > 0) {
+        <div class="blog-page__tags">
+          <button
+            class="tag"
+            [class.tag--active]="selectedTag() === null"
+            (click)="filterByTag(null)"
+          >
+            Todos
+          </button>
+          @for (tag of allTags(); track tag) {
+            <button
+              class="tag"
+              [class.tag--active]="selectedTag() === tag"
+              (click)="filterByTag(tag)"
+            >
+              {{ tag }}
+            </button>
+          }
+        </div>
+      }
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="blog-page__content container">
+    @if (loading()) {
+      <div class="blog-page__loading">
+        @for (i of [1,2,3]; track i) {
+          <div class="blog-skeleton">
+            <div class="blog-skeleton__meta"></div>
+            <div class="blog-skeleton__title"></div>
+            <div class="blog-skeleton__text"></div>
+            <div class="blog-skeleton__text blog-skeleton__text--short"></div>
+          </div>
+        }
+      </div>
+    } @else if (filteredPosts().length === 0) {
+      <div class="blog-page__empty">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+        <p>Nenhum post encontrado para esta categoria.</p>
+        <button class="btn btn--ghost" (click)="filterByTag(null)">Ver todos os posts</button>
+      </div>
+    } @else {
+      <!-- Featured post (first) -->
+      @if (selectedTag() === null && filteredPosts().length > 0) {
+        @let featured = filteredPosts()[0];
+        <article class="blog-featured card">
+          <div class="blog-featured__badge">Mais recente</div>
+          <div class="blog-featured__meta">
+            <time>{{ formatDate(featured.date) }}</time>
+            <span>{{ featured.readingTimeMin }} min de leitura</span>
+          </div>
+          <h2 class="blog-featured__title">
+            <a [routerLink]="['/blog', featured.slug]">{{ featured.title }}</a>
+          </h2>
+          <p class="blog-featured__excerpt">{{ featured.excerpt }}</p>
+          <div class="blog-featured__footer">
+            <div class="blog-featured__tags">
+              @for (tag of featured.tags; track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+            </div>
+            <a [routerLink]="['/blog', featured.slug]" class="btn btn--primary btn--sm">
+              Ler artigo →
+            </a>
+          </div>
+        </article>
+      }
+
+      <!-- Post grid -->
+      <div class="blog-grid">
+        @for (post of (selectedTag() === null ? filteredPosts().slice(1) : filteredPosts()); track post.slug) {
+          <article class="blog-item card">
+            <div class="blog-item__meta">
+              <time>{{ formatDate(post.date) }}</time>
+              <span class="blog-item__time">{{ post.readingTimeMin }} min</span>
+            </div>
+            <h3 class="blog-item__title">
+              <a [routerLink]="['/blog', post.slug]">{{ post.title }}</a>
+            </h3>
+            <p class="blog-item__excerpt">{{ post.excerpt }}</p>
+            <div class="blog-item__tags">
+              @for (tag of post.tags.slice(0, 3); track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+            </div>
+          </article>
+        }
+      </div>
+    }
+  </main>
+</div>

@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "angular-signals-guia-completo",
+    "title": "Angular Signals: O Guia Completo para Reatividade Moderna",
+    "date": "2025-03-15",
+    "tags": ["Angular", "TypeScript", "Frontend"],
+    "excerpt": "Aprenda como os Signals do Angular v16+ revolucionam a forma como gerenciamos estado reativo nas aplicações. Do básico ao avançado com exemplos práticos.",
+    "readingTimeMin": 8
+  },
+  {
+    "slug": "home-assistant-automacoes-avancadas",
+    "title": "Home Assistant: Automações Avançadas com Scripts e Blueprints",
+    "date": "2025-02-20",
+    "tags": ["Home Assistant", "IoT", "Automação"],
+    "excerpt": "Como criar automações complexas no Home Assistant usando scripts YAML, templates Jinja2 e blueprints reutilizáveis para uma smart home inteligente de verdade.",
+    "readingTimeMin": 12
+  },
+  {
+    "slug": "gitflow-github-actions-deploy",
+    "title": "GitFlow + GitHub Actions: Deploy Automatizado do Zero",
+    "date": "2025-01-10",
+    "tags": ["Git", "GitHub Actions", "DevOps"],
+    "excerpt": "Como configurar um fluxo de trabalho profissional com GitFlow e automatizar o deploy com GitHub Actions, incluindo ambientes de staging e produção.",
+    "readingTimeMin": 10
+  },
+  {
+    "slug": "zigbee-mqtt-home-assistant",
+    "title": "Zigbee + MQTT + Home Assistant: A Tríade Perfeita para IoT",
+    "date": "2024-12-05",
+    "tags": ["Zigbee", "MQTT", "IoT", "Home Assistant"],
+    "excerpt": "Configuração completa de uma rede Zigbee com Zigbee2MQTT integrada ao Home Assistant. Desde o hardware até as automações.",
+    "readingTimeMin": 15
+  },
+  {
+    "slug": "typescript-advanced-patterns",
+    "title": "TypeScript Avançado: Padrões que Todo Dev Angular Precisa Conhecer",
+    "date": "2024-11-18",
+    "tags": ["TypeScript", "Angular", "Boas Práticas"],
+    "excerpt": "Generics, Conditional Types, Template Literal Types e outras features avançadas do TypeScript aplicadas a projetos Angular reais.",
+    "readingTimeMin": 11
+  }
+]

@@ -1,0 +1,395 @@
+// ============================================================
+// Global Styles — Maycon Software Portfolio
+// ============================================================
+
+// ---- Breakpoints ----
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+
+// ---- Light Theme (default) ----
+:root {
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f8fafc;
+  --color-surface: #f1f5f9;
+  --color-surface-hover: #e2e8f0;
+  --color-primary: #6366f1;
+  --color-primary-dark: #4f46e5;
+  --color-primary-light: #a5b4fc;
+  --color-accent: #f59e0b;
+  --color-accent-dark: #d97706;
+  --color-success: #10b981;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --color-text-inverse: #ffffff;
+  --color-border: #e2e8f0;
+  --color-border-focus: #6366f1;
+  --color-shadow: rgba(0, 0, 0, 0.08);
+  --color-shadow-lg: rgba(0, 0, 0, 0.15);
+
+  // Contribution graph
+  --color-contrib-0: #ebedf0;
+  --color-contrib-1: #9be9a8;
+  --color-contrib-2: #40c463;
+  --color-contrib-3: #30a14e;
+  --color-contrib-4: #216e39;
+  --color-contrib-border: rgba(27, 31, 35, 0.06);
+
+  // Navbar
+  --color-navbar-bg: rgba(255, 255, 255, 0.9);
+  --color-navbar-border: #e2e8f0;
+
+  // Code
+  --color-code-bg: #f1f5f9;
+  --color-code-text: #6366f1;
+
+  // Spacing scale
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  // Typography
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  // Radius
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  // Transitions
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+}
+
+// ---- Dark Theme ----
+[data-theme="dark"] {
+  --color-bg: #0d1117;
+  --color-bg-secondary: #0d1117;
+  --color-surface: #161b22;
+  --color-surface-hover: #1e2631;
+  --color-primary: #818cf8;
+  --color-primary-dark: #6366f1;
+  --color-primary-light: #c7d2fe;
+  --color-accent: #fbbf24;
+  --color-accent-dark: #f59e0b;
+  --color-success: #34d399;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-text-inverse: #0f172a;
+  --color-border: #30363d;
+  --color-border-focus: #818cf8;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-shadow-lg: rgba(0, 0, 0, 0.5);
+
+  // Contribution graph
+  --color-contrib-0: #161b22;
+  --color-contrib-1: #0e4429;
+  --color-contrib-2: #006d32;
+  --color-contrib-3: #26a641;
+  --color-contrib-4: #39d353;
+  --color-contrib-border: rgba(240, 246, 252, 0.06);
+
+  // Navbar
+  --color-navbar-bg: rgba(13, 17, 23, 0.9);
+  --color-navbar-border: #30363d;
+
+  // Code
+  --color-code-bg: #1e2631;
+  --color-code-text: #a5b4fc;
+}
+
+// ============================================================
+// Reset & Base
+// ============================================================
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  transition: background-color var(--transition-base), color var(--transition-base);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+
+  &:hover {
+    color: var(--color-primary-dark);
+  }
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+p {
+  color: var(--color-text-muted);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background-color: var(--color-code-bg);
+  color: var(--color-code-text);
+  padding: 0.125em 0.375em;
+  border-radius: var(--radius-sm);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+// ============================================================
+// Layout Utilities
+// ============================================================
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+
+  @media (min-width: $bp-md) {
+    padding: 0 var(--space-8);
+  }
+}
+
+.section {
+  padding: var(--space-16) 0;
+
+  @media (min-width: $bp-md) {
+    padding: var(--space-24) 0;
+  }
+}
+
+.section-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  margin-bottom: var(--space-4);
+
+  @media (min-width: $bp-md) {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+.section-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-12);
+  max-width: 600px;
+}
+
+// ============================================================
+// Gradient Text
+// ============================================================
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// ============================================================
+// Buttons
+// ============================================================
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: 2px solid transparent;
+
+  &--primary {
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+
+    &:hover {
+      background: var(--color-primary-dark);
+      color: var(--color-text-inverse);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    }
+  }
+
+  &--secondary {
+    background: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+
+    &:hover {
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+    }
+  }
+
+  &--ghost {
+    background: var(--color-surface);
+    color: var(--color-text);
+
+    &:hover {
+      background: var(--color-surface-hover);
+    }
+  }
+}
+
+// ============================================================
+// Cards
+// ============================================================
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  transition: all var(--transition-base);
+
+  &:hover {
+    box-shadow: 0 8px 24px var(--color-shadow-lg);
+    transform: translateY(-2px);
+    border-color: var(--color-primary-light);
+  }
+}
+
+// ============================================================
+// Tags / Badges
+// ============================================================
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-fast);
+
+  &:hover {
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    border-color: var(--color-primary);
+  }
+}
+
+// ============================================================
+// Scrollbar
+// ============================================================
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+
+  &:hover {
+    background: var(--color-text-muted);
+  }
+}
+
+// ============================================================
+// Animations
+// ============================================================
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+// ============================================================
+// Selection
+// ============================================================
+
+::selection {
+  background: var(--color-primary);
+  color: white;
+}

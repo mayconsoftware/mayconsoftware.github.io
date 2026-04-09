@@ -1,0 +1,142 @@
+<!-- Header -->
+<header class="portfolio-header">
+  <div class="container">
+    <h1 class="portfolio-header__title">
+      <span class="gradient-text">Portfolio</span> & Tecnologias
+    </h1>
+    <p class="portfolio-header__subtitle">
+      Ferramentas, linguagens e frameworks que uso para construir produtos digitais robustos —
+      do frontend à automação residencial.
+    </p>
+  </div>
+</header>
+
+<!-- About Me -->
+<section class="section about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title">Sobre <span class="gradient-text">mim</span></h2>
+        <div class="about-paragraphs">
+          <p>
+            Sou engenheiro de software com mais de uma década de experiência construindo
+            aplicações web escaláveis e soluções de automação. Minha paixão está na
+            interseção entre software elegante e experiências de usuário excepcionais.
+          </p>
+          <p>
+            No mundo do desenvolvimento, me especializo em <strong>Angular</strong> e
+            <strong>TypeScript</strong>, criando interfaces ricas, performáticas e
+            acessíveis. Acredito em código limpo, testes automatizados e integração
+            contínua como pilares de qualidade.
+          </p>
+          <p>
+            Fora do trabalho, sou entusiasta de <strong>automação residencial</strong> —
+            integro dispositivos IoT com Home Assistant, Zigbee e MQTT para criar
+            ambientes inteligentes. É onde a criatividade encontra a engenharia de forma
+            mais tangível e divertida.
+          </p>
+          <p>
+            Valorizo open source, comunidade e compartilhamento de conhecimento. Este
+            blog é parte desse compromisso.
+          </p>
+        </div>
+
+        <div class="about-values">
+          @for (v of values; track v.icon) {
+            <div class="about-value">
+              <span class="about-value__icon">{{ v.icon }}</span>
+              <div>
+                <strong>{{ v.title }}</strong>
+                <span>{{ v.desc }}</span>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+
+      <aside class="about-sidebar">
+        <div class="about-card card">
+          <h3 class="about-card__title">Foco atual</h3>
+          <ul class="about-card__list">
+            <li>Angular v19 com Signals</li>
+            <li>Automação com Home Assistant</li>
+            <li>Matter & Thread em IoT</li>
+            <li>Open source contributions</li>
+          </ul>
+        </div>
+
+        <div class="about-card card">
+          <h3 class="about-card__title">Interesses</h3>
+          <ul class="about-card__list">
+            <li>🏠 Smart Home / IoT</li>
+            <li>⚡ Performance Web</li>
+            <li>🤖 Automação</li>
+            <li>🌐 Open Source</li>
+            <li>📐 Arquitetura de Software</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- Tech Categories -->
+<section class="section tech-section">
+  <div class="container">
+    <h2 class="section-title">Stack <span class="gradient-text">técnica</span></h2>
+    <p class="section-subtitle">
+      Tecnologias que uso no dia a dia, organizadas por área de atuação.
+    </p>
+
+    <div class="tech-categories">
+      @for (cat of categories; track cat.name) {
+        <div class="tech-category">
+          <h3 class="tech-category__title">
+            <span class="tech-category__icon">{{ cat.icon }}</span>
+            {{ cat.name }}
+          </h3>
+
+          <div class="tech-items">
+            @for (item of cat.items; track item.name) {
+              <div class="tech-item card">
+                <div class="tech-item__header">
+                  <span class="tech-item__name">{{ item.name }}</span>
+                  <span
+                    class="tech-item__level"
+                    [style.color]="levelColor[item.level]"
+                    [style.background]="levelColor[item.level] + '20'"
+                  >
+                    {{ levelLabel[item.level] }}
+                  </span>
+                </div>
+                <p class="tech-item__desc">{{ item.description }}</p>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Smart Home Integrations -->
+<section class="section integrations-section">
+  <div class="container">
+    <h2 class="section-title">Integrações <span class="gradient-text">Smart Home</span></h2>
+    <p class="section-subtitle">Ecossistema de automação residencial que utilizo e mantenho.</p>
+
+    <div class="integrations-grid">
+      @for (integration of integrations; track integration.name) {
+        <div class="integration-card card">
+          <img
+            [src]="'assets-home/devices/ha-integration/' + integration.icon"
+            [alt]="integration.name"
+            class="integration-card__icon"
+            loading="lazy"
+          >
+          <span class="integration-card__name">{{ integration.name }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>

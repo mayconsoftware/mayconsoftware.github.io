@@ -1,0 +1,98 @@
+<section class="contrib-graph">
+  <div class="contrib-graph__header">
+    <h3 class="contrib-graph__title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+      </svg>
+      Contribuições no GitHub
+    </h3>
+    @if (!loading()) {
+      <span class="contrib-graph__total">
+        <strong>{{ total() }}</strong> contribuições no último ano
+      </span>
+    }
+  </div>
+
+  @if (loading()) {
+    <div class="contrib-graph__skeleton">
+      <div class="contrib-graph__skeleton-grid">
+        @for (w of [].constructor(53); track $index) {
+          <div class="contrib-graph__skeleton-col">
+            @for (d of [].constructor(7); track $index) {
+              <div class="contrib-graph__skeleton-cell"></div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  } @else {
+    <div class="contrib-graph__scroll-wrapper">
+      <div class="contrib-graph__svg-wrapper">
+        <!-- Month labels -->
+        <div class="contrib-graph__months">
+          @for (m of monthLabels(); track m.colIndex) {
+            <span
+              class="contrib-graph__month-label"
+              [style.left.px]="m.colIndex * 14"
+            >{{ m.label }}</span>
+          }
+        </div>
+
+        <!-- Grid -->
+        <div class="contrib-graph__grid-row">
+          <!-- Day-of-week labels -->
+          <div class="contrib-graph__days">
+            <span>Dom</span>
+            <span></span>
+            <span>Ter</span>
+            <span></span>
+            <span>Qui</span>
+            <span></span>
+            <span>Sáb</span>
+          </div>
+
+          <!-- Cells -->
+          <div class="contrib-graph__cells">
+            @for (week of weeks(); track $index; let wi = $index) {
+              <div class="contrib-graph__week">
+                @for (day of week.contributionDays; track day.date) {
+                  <div
+                    class="contrib-graph__cell"
+                    [style.background-color]="getCellColor(day.contributionCount)"
+                    [attr.title]="day.contributionCount + ' contribuições em ' + formatDate(day.date)"
+                    [attr.data-count]="day.contributionCount"
+                  ></div>
+                }
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="contrib-graph__legend">
+      <span class="contrib-graph__legend-label">Menos</span>
+      <div class="contrib-graph__legend-cell" [style.background-color]="getCellColor(0)"></div>
+      <div class="contrib-graph__legend-cell" [style.background-color]="getCellColor(2)"></div>
+      <div class="contrib-graph__legend-cell" [style.background-color]="getCellColor(5)"></div>
+      <div class="contrib-graph__legend-cell" [style.background-color]="getCellColor(8)"></div>
+      <div class="contrib-graph__legend-cell" [style.background-color]="getCellColor(12)"></div>
+      <span class="contrib-graph__legend-label">Mais</span>
+    </div>
+  }
+
+  <a
+    href="https://github.com/visaodeempresa"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="contrib-graph__link"
+  >
+    Ver perfil no GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+      <polyline points="15 3 21 3 21 9"/>
+      <line x1="10" y1="14" x2="21" y2="3"/>
+    </svg>
+  </a>
+</section>
